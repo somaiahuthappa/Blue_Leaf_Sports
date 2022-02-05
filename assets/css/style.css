@@ -4,17 +4,7 @@
     box-sizing: border-box;
 }
 
-/* My CSS */ 
-body {
-  z-index: 9999;
-  background-image: url("../images/Background-img.png");
-  background-attachment: fixed;
-  background-position: 80%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.8;
-}
-
+/* Cards section begins */
 /* Title - Brand Logo */
 .logo h1{
   font-family: 'Audiowide', cursive;
