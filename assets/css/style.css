@@ -5,7 +5,7 @@
 }
 
 /* My CSS */
-body {
+/* body {
   z-index: 9999;
   background-image: url("../images/Background-img.png");
   background-attachment: fixed;
@@ -13,7 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   opacity: 0.8;
-}
+} */
 
 /* Title - Brand Logo */
 .logo h1 {
