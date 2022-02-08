@@ -2,7 +2,7 @@
 // var searchTopHistoryId = 0;
 // var searchLeagueHistoryId = 0;
 
-
+//The code is commented out until I can upload the information on to the webpage.
 // function loadSearchHistory() {
 //     var array = ["Players", "Top", "League"]
 //     for (let index = 0; index < array.length; index++) {
@@ -345,9 +345,22 @@
 //             $("#search" + type + (i+1)).attr("id", "search" + type + i);
 //             saveSearchHistory("search" + type + i, $("#search" + type + i).text());
 //         }
-//         searchId = 7;
+//         size = 7;
+//         switch (type) {
+//             case "Players":
+//                 searchPlayersHistoryId = size;
+//                 break;
+//             case "Top":
+//                 searchTopHistoryId = size;
+//                 break;
+//             case "League":
+//                 searchTopHistoryId = searchLeagueHistoryId;
+//                 break;
+//             default:
+//                 break;
+//         }
 //     }
-//     idValue = searchId
+//     idValue = "search" + type + size;
 //     historyButton.attr("id", idValue);
 //     historyButton.text(text);
 //     switch (type) {
