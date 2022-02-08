@@ -10,13 +10,19 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+
   
 }
+.header-img {
+    position: absolute;
+   left: 0px;
+    top: 0px;
+    z-index: -1;
+  }
  
 
 body {
-  margin: 0; 
-  background-color: blue;
+  margin: 0;
 }
 
   .button {
