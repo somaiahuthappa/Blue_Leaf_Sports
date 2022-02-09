@@ -22,74 +22,144 @@
         <!--TYPOGRAPHY-->
         <div class="row">
           
-          <!--HEADING-->
+            <!--HEADING-->
          
-          <section id="header-img">
-              <div class="header-img">
-            <img src="./assets/images/BlueLeaf Sports.png" height="175" width="175" alt="Logo">
-             </div>
+            <section id="header-img">
+                <div class="header-img">
+                    <img src="./assets/images/BlueLeaf Sports.png" height="175" width="175" alt="Logo">
+                </div>
 
-         <hr>
+                <hr>
          
         
-          <div class="sitebuttons">
-            <a class="button float-right">Soccer</a>
-            <a class="button float-right">Hockey</a>
-            <a class="button float-right">About Us</a>
-          </div>
+                <div class="sitebuttons">
+                    <a class="button float-right">Soccer</a>
+                    <a class="button float-right">Hockey</a>
+                    <a class="button float-right">About Us</a>
+                </div>
           
-          <hr>
-        </div>
+                <hr>
+            </div>    
+                <img class="thumbnail" src="assets/images/hockey.png" alt="Bird's Eye View.">
+            
+            
         
-        <img class="thumbnail" src="assets/images/hockey.png" alt="Bird's Eye View.">
+        
           
         
         <Div class = "row"> 
-          <div class = "columns small-6">
+            <div class = "columns small-6">
         
-        <fieldset class= "fieldset soccer" >
-          <legend> <h2>Soccer Leagues</h2> </legend>
-          <button type="button"> <img src="assets/images/premier-league-new-logo-D22A0CE87E-seeklogo.com.png" height ="80" width="100" /></button>
-          <button type="button"> <img src="assets/images/serie-a-vector-logo.png" height ="80" width="100" /></button>
-          <button type="button"> <img src="./assets/images/bundesliga-logo.png" height ="80" width="100" /></button>
-        </fieldset>
-        
-        <fieldset class="fieldset">
-          <legend> <h2>Season Matches</h2> </legend>
-          <button class="button button1">EXPLORE</button>
-        </fieldset>
-        
-        
-        
-        <fieldset class="fieldset hockey">
-          <legend> <h2>Hockey Leagues</h2> </legend>
-          <button type="button"> <img src="assets/images/NHL.png" height ="80" width="100" /></button>
-          <button type="button"> <img src="assets/images/Ontario-Hockey-League-logo.png" height ="80" width="100" /></button>
-          <button type="button"> <img src="assets/images/American-Hockey-League-logo.png" height ="80" width="100" /></button>
-          
-        </fieldset>
-        
-        
-        <fieldset class="fieldset">
-          <legend> <h2>Season Matches</h2> </legend>
-          <button class="button button2">EXPLORE</button>
-        </fieldset>
-           </div>
-        
-           <fieldset class="fieldset">
-             <h3>Live Tweets</h3>
-             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quam adipisci expedita maxime. Tempora provident, eveniet adipisci repellat quaerat quas iste! Asperiores aliquam, maxime dignissimos exercitationem quasi rem nam qui!</p>
-           </fieldset>
-          </div>
+                <fieldset class= "fieldset soccer" >
+                    <legend> <h2>Soccer Leagues</h2> </legend>
+                    <button type="button"> <img src="assets/images/premier-league-new-logo-D22A0CE87E-seeklogo.com.png" height ="80" width="100" /></button>
+                    <button type="button"> <img src="assets/images/serie-a-vector-logo.png" height ="80" width="100" /></button>
+                    <button type="button"> <img src="./assets/images/bundesliga-logo.png" height ="80" width="100" /></button>
+                </fieldset>
+            
+                <fieldset class="fieldset">
+                    <legend> <h2>Season Matches</h2> </legend>
+                    <button class="button button1">EXPLORE</button>
+                </fieldset>
+            
+            
+            
+                <fieldset class="fieldset hockey">
+                    <legend> <h2>Hockey Leagues</h2> </legend>
+                    <button type="button"> <img src="assets/images/NHL.png" height ="80" width="100" /></button>
+                    <button type="button"> <img src="assets/images/Ontario-Hockey-League-logo.png" height ="80" width="100" /></button>
+                    <button type="button"> <img src="assets/images/American-Hockey-League-logo.png" height ="80" width="100" /></button>
+                
+                </fieldset>
+            
+            
+                <fieldset class="fieldset">
+                    <legend> <h2>Search Results</h2> </legend>
+                    <section class="showResult"></section>
+                    <button class="button button2" id="deleteSearch">Delete</button>
+                </fieldset>
+                </div>
+
+                <fieldset class="fieldset">
+                        <h3>Live Tweets</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quam adipisci expedita maxime. Tempora provident, eveniet adipisci repellat quaerat quas iste! Asperiores aliquam, maxime dignissimos exercitationem quasi rem nam qui!</p>
+                </fieldset>
+
+                <hr>
+
+                <fieldset class="fieldset">
+                    <h3>Query Search</h3>
+                    <aside>
+                        <section class="" id="accordion">
+                            <h3>Instructions</h3>
+                            <article>
+                                <p>
+                                    Please follow the following instruction for each 
+                                    section, to retrieve the desired information.
+                                    <ul>
+                                        <li>League Teams: Please include the name of the country 
+                                            and the name of the league you want to recieve back. For 
+                                            both soccer and hockey leagues/cups.
+                                        </li>
+                                        <li>Team Players: Please include the full name of the team if the 
+                                            shorthand name does not work. Only for soccer teams.
+                                        </li>
+                                        <li> League/Cup Top Scorers: Please include the name of the country and
+                                            the name of the league you want to view its top scorers. Only 
+                                            for soccer leagues/cups.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </article>
+                            <h3>League Teams</h3>
+                            <article class="leagueSearchSection">
+                                <p>
+                                    You can search for the teams of a given league/cup.
+                                    <br>
+                                    Please follow the example bellow for input format.
+                                </p>
+                                <textarea id="searchLeagueInfo" type="text" placeholder="Sport, League/Cup, Country"></textarea>
+                                <button id="searchLeagueBtn">Search</button>
+                                <section class="searchLeagueHistory">
+                                </section>
+                            </article>
+                            <h3>Team Players</h3>
+                            <article class="playersSearchSection">
+                                <p>
+                                    You can search for the players of a given team.
+                                    <br>
+                                    Please follow the example bellow for input format.
+                                </p>
+                                <textarea id="searchPlayersInfo" type="text" placeholder="Soccer, League/Cup, Country, TeamName"></textarea>
+                                <button id="searchPlayersBtn">Search</button>
+                                <section class="searchPlayersHistory">
+                                </section>
+                            </article>
+                            <h3>League/Cup Top Scorers</h3>
+                            <article class="topSearchSection">
+                                <p>
+                                    You can search for the top scorers of a given league/cup.
+                                    <br>
+                                    Please follow the example bellow for input format.
+                                </p>
+                                <textarea id="searchTopInfo" type="text" placeholder="Soccer, League/Cup, Country"></textarea>
+                                <button id="searchTopBtn">Search</button>
+                                <section class="searchTopHistory">
+                                </section>
+                            </article>
+                        </section>
+                    </aside>
+                </fieldset>
+            </div>
         </Div>
-        
+            
         <!--Breadcrumbs-->
         <hr>
         <nav role="navigation">
-          <ul class="breadcrumbs">
-            <li><a href="#">Back to Top</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
+            <ul class="breadcrumbs">
+                <li><a href="#">Back to Top</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
         </nav>
          <section id="container">  
             <div class="asideContainer">
@@ -278,13 +348,6 @@
         <script>
             $( function() {
                 $( "#accordion" ).accordion();
-            });
-            $( function() {
-                $( "#tabs1" ).tabs();
-            });
-
-            $( function() {
-                $( "#tabs2" ).tabs();
             });
         </script>
     </body>
