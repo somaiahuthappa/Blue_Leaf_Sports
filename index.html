@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,150 +19,248 @@
     <title>BlueLeaf Sports</title>
     
 </head>
+
     <body>
-        <!--TYPOGRAPHY-->
-        <div class="row">
-          
-            <!--HEADING-->
-         
-            <section id="header-img">
-                <div class="header-img">
-                    <img src="./assets/images/BlueLeaf Sports.png" height="175" width="175" alt="Logo">
-                </div>
 
-                <hr>
-         
-        
-                <div class="sitebuttons">
-                    <a class="button float-right">Soccer</a>
-                    <a class="button float-right">Hockey</a>
-                    <a class="button float-right">About Us</a>
-                </div>
-          
-                <hr>
-            </div>    
-                <img class="thumbnail" src="assets/images/hockey.png" alt="Bird's Eye View.">
-            
-            
-        
-        
-          
-        
-        <Div class = "row"> 
-            <div class = "columns small-6">
-        
-                <fieldset class= "fieldset soccer" >
-                    <legend> <h2>Soccer Leagues</h2> </legend>
-                    <button type="button"> <img src="assets/images/premier-league-new-logo-D22A0CE87E-seeklogo.com.png" height ="80" width="100" /></button>
-                    <button type="button"> <img src="assets/images/serie-a-vector-logo.png" height ="80" width="100" /></button>
-                    <button type="button"> <img src="./assets/images/bundesliga-logo.png" height ="80" width="100" /></button>
-                </fieldset>
-            
-                <fieldset class="fieldset">
-                    <legend> <h2>Season Matches</h2> </legend>
-                    <button class="button button1">EXPLORE</button>
-                </fieldset>
-            
-            
-            
-                <fieldset class="fieldset hockey">
-                    <legend> <h2>Hockey Leagues</h2> </legend>
-                    <button type="button"> <img src="assets/images/NHL.png" height ="80" width="100" /></button>
-                    <button type="button"> <img src="assets/images/Ontario-Hockey-League-logo.png" height ="80" width="100" /></button>
-                    <button type="button"> <img src="assets/images/American-Hockey-League-logo.png" height ="80" width="100" /></button>
-                
-                </fieldset>
-            
-            
-                <fieldset class="fieldset">
-                    <legend> <h2>Search Results</h2> </legend>
-                    <section class="showResult"></section>
-                    <button class="button button2" id="deleteSearch">Delete</button>
-                </fieldset>
-                </div>
+  <!--TYPOGRAPHY-->
+  <div class="row">
 
-                <fieldset class="fieldset">
-                        <h3>Live Tweets</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quam adipisci expedita maxime. Tempora provident, eveniet adipisci repellat quaerat quas iste! Asperiores aliquam, maxime dignissimos exercitationem quasi rem nam qui!</p>
-                </fieldset>
+    <!--HEADING-->
 
-                <hr>
+    <section id="header-img" class="header-img sitebuttons">
+      <img src="./assets/BlueLeaf Sports.png" height="175" width="175" alt="Logo">
+    </section>
 
-                <fieldset class="fieldset">
-                    <h3>Query Search</h3>
-                    <aside>
-                        <section class="" id="accordion">
-                            <h3>Instructions</h3>
-                            <article>
-                                <p>
-                                    Please follow the following instruction for each 
-                                    section, to retrieve the desired information.
-                                    <ul>
-                                        <li>League Teams: Please include the name of the country 
-                                            and the name of the league you want to recieve back. For 
-                                            both soccer and hockey leagues/cups.
-                                        </li>
-                                        <li>Team Players: Please include the full name of the team if the 
-                                            shorthand name does not work. Only for soccer teams.
-                                        </li>
-                                        <li> League/Cup Top Scorers: Please include the name of the country and
-                                            the name of the league you want to view its top scorers. Only 
-                                            for soccer leagues/cups.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </article>
-                            <h3>League Teams</h3>
-                            <article class="leagueSearchSection">
-                                <p>
-                                    You can search for the teams of a given league/cup.
-                                    <br>
-                                    Please follow the example bellow for input format.
-                                </p>
-                                <textarea id="searchLeagueInfo" type="text" placeholder="Sport, League/Cup, Country"></textarea>
-                                <button id="searchLeagueBtn">Search</button>
-                                <section class="searchLeagueHistory">
-                                </section>
-                            </article>
-                            <h3>Team Players</h3>
-                            <article class="playersSearchSection">
-                                <p>
-                                    You can search for the players of a given team.
-                                    <br>
-                                    Please follow the example bellow for input format.
-                                </p>
-                                <textarea id="searchPlayersInfo" type="text" placeholder="Soccer, League/Cup, Country, TeamName"></textarea>
-                                <button id="searchPlayersBtn">Search</button>
-                                <section class="searchPlayersHistory">
-                                </section>
-                            </article>
-                            <h3>League/Cup Top Scorers</h3>
-                            <article class="topSearchSection">
-                                <p>
-                                    You can search for the top scorers of a given league/cup.
-                                    <br>
-                                    Please follow the example bellow for input format.
-                                </p>
-                                <textarea id="searchTopInfo" type="text" placeholder="Soccer, League/Cup, Country"></textarea>
-                                <button id="searchTopBtn">Search</button>
-                                <section class="searchTopHistory">
-                                </section>
-                            </article>
-                        </section>
-                    </aside>
-                </fieldset>
-            </div>
-        </Div>
-            
-        <!--Breadcrumbs-->
-        <hr>
-        <nav role="navigation">
-            <ul class="breadcrumbs">
-                <li><a href="#">Back to Top</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </nav>
-         <section id="container">  
+    <hr>
+    <div class="">
+    <a class="button float-right" data-open="about-us">About Us</a>
+      <a class="button float-right" href="#soccer">Soccer</a>
+      <a class="button float-right" href="#ice-hockey">Ice Hockey</a>
+      <a class="button float-right" data-open="about-us">About Us</a>
+  </div>
+
+  <div class="reveal" id="about-us" data-reveal data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <h1>About Us</h1>
+    <p class="lead">About Us</p>
+    <p>A team of four working on our first project that have created this site to allow sports fans to explore their
+      favourite leagues and save cool stats for reference</p>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- orbit -->
+  <div class="orbit" role="region" aria-label="soccer and ice hockey pictures" data-orbit>
+    <div class="orbit-wrapper">
+      <div class="orbit-controls">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      </div>
+      <ul class="orbit-container">
+        <li class="is-active orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/f" alt="Space">
+            <figcaption class="orbit-caption">Practice make perfect</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/icehockey1.jpg" alt="Space">
+            <figcaption class="orbit-caption">Stick fight</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/football2.jpg" alt="Space">
+            <figcaption class="orbit-caption">Goal!</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/icehockey2.jpg" alt="Space">
+            <figcaption class="orbit-caption">Pursuit</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+    <nav class="orbit-bullets">
+      <button class="is-active" data-slide="0">
+        <span class="show-for-sr">First slide details.</span>
+        <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+      </button>
+      <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+      <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+      <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="columns small-6">
+
+      <fieldset id="soccer" class="fieldset soccer">
+        <legend>
+          <h2>Soccer Leagues</h2>
+        </legend>
+        <button data-open="premier-league" id="thumbnail" type="button"> <img
+            src="./assets/premier-league-new-logo-D22A0CE87E-seeklogo.com.png" height="80" width="100" /></button>
+        <button data-open="serie-a" id="thumbnail" type="button"> <img src="./assets/serie-a-vector-logo.png" height="80"
+            width="100" /></button>
+        <button data-open="bundesliga" id="thumbnail" type="button"> <img src="./assets/bundesliga-logo.png" height="80"
+            width="100" /></button>
+      </fieldset>
+
+      <!-- This is the first modal -->
+      <div class="reveal large" aria-labelledby="team-cards" id="premier-league" data-reveal data-animation-in="fade-in"
+        data-multiple-opened="true" data-animation-out="fade-out">
+        <h1 id="team-cards">Premier League</h1>
+        <p class="lead">Premier League Cards</p>
+        <button class="button" data-open="premier-league-info" id="team-info">Team Information</button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the first nested modal -->
+      <div class="medium reveal" aria-labelledby="team-info" id="premier-league-info" data-reveal
+        data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+        <h2 id="team-info">Premier League Team Information</h2>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the second modal -->
+      <div class="reveal large" aria-labelledby="team-cards" id="serie-a" data-reveal data-animation-in="fade-in"
+        data-multiple-opened="true" data-animation-out="fade-out">
+        <h1 id="team-cards">Serie-A</h1>
+        <p class="lead">Seri-A cards</p>
+        <button class="button" data-open="serie-a-info" id="team-info">Team Information</button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the second nested modal -->
+      <div class="medium reveal" aria-labelledby="team-info" id="serie-a-info" data-reveal data-multiple-opened="true"
+        data-animation-in="fade-in" data-animation-out="fade-out">
+        <h2 id="team-info">Seri-A Team Information</h2>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the third modal -->
+      <div class="reveal large" aria-labelledby="team-cards" id="bundesliga" data-reveal data-animation-in="fade-in"
+        data-multiple-opened="true" data-animation-out="fade-out">
+        <h1 id="team-cards">Serie-A</h1>
+        <p class="lead">Seri-A cards</p>
+        <button class="button" data-open="bundesliga-info" id="team-info">Team Information</button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the third nested modal -->
+      <div class="medium reveal" aria-labelledby="team-info" id="bundesliga-info" data-reveal
+        data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+        <h2 id="team-info">Seri-A Team Information</h2>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+      <!-- Accordion Section -->
+      <fieldset class="fieldset">
+        <legend>
+          <h2>Season Matches</h2>
+        </legend>
+        <button class="button button1">EXPLORE</button>
+      </fieldset> 
+
+
+
+      <fieldset class="fieldset hockey" id="ice-hockey">
+        <legend>
+          <h2>Hockey Leagues</h2>
+        </legend>
+        <button data-open="nhl" id="thumbnail" type="button"> <img src="./assets/NHL.png"
+            height="80" width="100" /></button>
+        <button data-open="ohl" id="thumbnail" type="button"> <img src="./assets/Ontario-Hockey-League-logo.png"
+            height="80" width="100" /></button>
+        <button data-open="ahl" id="thumbnail" type="button"> <img src="./assets/American-Hockey-League-logo.png"
+            height="80" width="100" /></button>
+      </fieldset>
+
+      <!-- This is the first modal -->
+      <div class="reveal large" aria-labelledby="team-cards" id="nhl" data-reveal data-animation-in="fade-in"
+        data-multiple-opened="true" data-animation-out="fade-out">
+        <h1 id="team-cards">NHL</h1>
+        <p class="lead">NHL cards</p>
+        <button class="button" data-open="nhl-info" id="team-info">Team Information</button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the first nested modal -->
+      <div class="medium reveal" aria-labelledby="team-info" id="nhl-info" data-reveal data-multiple-opened="true"
+        data-animation-in="fade-in" data-animation-out="fade-out">
+        <h2 id="team-info">NHL Team Information</h2>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the second modal -->
+      <div class="reveal large" aria-labelledby="team-cards" id="ohl" data-reveal data-animation-in="fade-in"
+        data-multiple-opened="true" data-animation-out="fade-out">
+        <h1 id="team-cards">OHL</h1>
+        <p class="lead">OHL cards</p>
+        <button class="button" data-open="ohl-info" id="team-info">Team Information</button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the second nested modal -->
+      <div class="medium reveal" aria-labelledby="team-info" id="ohl-info" data-reveal data-multiple-opened="true"
+        data-animation-in="fade-in" data-animation-out="fade-out">
+        <h2 id="team-info">OHL Team Information</h2>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the third modal -->
+      <div class="reveal large" aria-labelledby="team-cards" id="ahl" data-reveal data-animation-in="fade-in"
+        data-multiple-opened="true" data-animation-out="fade-out">
+        <h1 id="team-cards">AHL</h1>
+        <p class="lead">AHL cards</p>
+        <button class="button" data-open="ahl-info" id="team-info">Team Information</button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- This is the third nested modal -->
+      <div class="medium reveal" aria-labelledby="team-info" id="ahl-info" data-reveal data-multiple-opened="true"
+        data-animation-in="fade-in" data-animation-out="fade-out">
+        <h2 id="team-info">AHL Team Information</h2>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+<!-- Accordion Section -->
+      <fieldset class="fieldset">
+        <legend>
+          <h2>Season Matches</h2>
+        </legend>
+        <button class="button button2">EXPLORE</button>
+
+        <section id="container">  
+
             <div class="asideContainer">
                 <aside id="accordion">
                     <h3>Instructions</h3>
@@ -336,18 +435,42 @@
                 </div>
             </section>
         </section>
-        <!-- Javascript File(s) -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-        <!-- Compressed Foundation JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
-        <!-- <script src="js/vendor/what-input.js"></script> -->
-        <script src="js/vendor/foundation.js"></script>
-       <!-- <script src="js/app.js"></script> -->
-        <script src="./assets/js/script.js"></script>
-        <script>
-            $( function() {
-                $( "#accordion" ).accordion();
+
+
+      </fieldset>
+    </div>
+
+    <fieldset class="fieldset">
+      <h3>Live Tweets</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quam adipisci expedita maxime. Tempora
+        provident, eveniet adipisci repellat quaerat quas iste! Asperiores aliquam, maxime dignissimos exercitationem
+        quasi rem nam qui!</p>
+    </fieldset>
+
+  </div>
+
+  <div class="row">
+    <nav role="navigation">
+      <ul class="breadcrumbs">
+        <li><a href="#">Back to Top</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- Javascript File(s) -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<!-- Compressed Foundation JavaScript -->
+<script src="./js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+<!-- <script src="js/vendor/what-input.js"></script> -->
+<script src="js/vendor/foundation.js"></script>
+<!-- <script src="js/app.js"></script> -->
+<script src="./assets/js/script.js"></script>
+<script>
+    $( function() {
+    $( "#accordion" ).accordion();
             });
         </script>
     </body>

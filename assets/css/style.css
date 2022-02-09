@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+
+body {
+  background: url("../dark-bg.jpg");
+  background-attachment: fixed;
+  color: whitesmoke;
+}
+
+.header-img {
+  display: inline;
+  
+}
+
+#soccer, #ice-hockey {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.reveal {
+  color: black;
+}
 /* My CSS */
 /* body {
   z-index: 9999;
