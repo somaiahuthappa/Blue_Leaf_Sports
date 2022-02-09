@@ -91,6 +91,7 @@ body {
   }
 } */
 
+/* media query for the header and nav section on small screens */
 .search-section {
   display: flex;
   flex-direction: column;
@@ -103,12 +104,13 @@ body {
     flex-direction: column;
   }
 
-  #orbit {
+  /* #orbit {
     display: none;
-  }
+  } */
     
 }
 
+/* media query to display league icons on small screens */
 @media screen and (max-width: 370px) {
   #soccer, #ice-hockey{
     display: flex;
