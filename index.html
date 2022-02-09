@@ -33,11 +33,11 @@
 
     <hr>
     <div class="">
-    <a class="button float-right" data-open="about-us">About Us</a>
+        <a class="button float-right" data-open="about-us">About Us</a>
       <a class="button float-right" href="#soccer">Soccer</a>
       <a class="button float-right" href="#ice-hockey">Ice Hockey</a>
-      <a class="button float-right" data-open="about-us">About Us</a>
-  </div>
+      <a class="button float-right" href="#querySearch">Query Search</a>
+    </div>
 
   <div class="reveal" id="about-us" data-reveal data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
     <h1>About Us</h1>
@@ -169,17 +169,6 @@
         </button>
       </div>
 
-
-      <!-- Accordion Section -->
-      <fieldset class="fieldset">
-        <legend>
-          <h2>Season Matches</h2>
-        </legend>
-        <button class="button button1">EXPLORE</button>
-      </fieldset> 
-
-
-
       <fieldset class="fieldset hockey" id="ice-hockey">
         <legend>
           <h2>Hockey Leagues</h2>
@@ -253,192 +242,75 @@
       </div>
 
 <!-- Accordion Section -->
-      <fieldset class="fieldset">
-        <legend>
-          <h2>Season Matches</h2>
-        </legend>
-        <button class="button button2">EXPLORE</button>
-
-        <section id="container">  
-
-            <div class="asideContainer">
-                <aside id="accordion">
-                    <h3>Instructions</h3>
-                    <div>
-                        <p>
-                            Please follow the placeholders to how to get the information you wish.
-                            You will be able to save your searches. Up to 8 entries can be saved
-                             at a time.
-                        </p>
-                    </div>
-                    <h3>Player</h3>
-                    <div>
-                        <p>
-                            This area is not coded.
-                            <textarea></textarea>
-                        </p>
-                    </div>
-                    <h3>Top Scorers</h3>
-                    <div>
-                        <p>
-                            I have a call that I can implement if you guys want.
-                        </p>
-                    </div>
-                    <h3>Other Leagues</h3>
-                    <div>
-                        <p>
-                            This can pop up a modal so the user can see the teams of other leages.
-                            They would need to provide a league/cup name and a country name.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <section id="soccer" class="leaguesContainer">
-                <div>
-                    <section>
-                        <article>
-                            <div id="tabs1" >
-                                <ul >
-                                    <li><a href="#tabs-1">Premier League</a></li>
-                                    <li><a href="#tabs-2">Serie A</a></li>
-                                    <li><a href="#tabs-3">Bundesliga 1</a></li>
-                                    <li><a href="#tabs-4">Primera Division</a></li>
-                                </ul>
-                                <div id="tabs-1">
-                                    <div>      
-                                        <aside id="leaguePL">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueSoccer1">
-                                                </section>
-                                            </section>
-                                            <section>
-                                                <h4>Top Scorers</h4>
-                                            </section>
-                                        </aside>
-                                    </div>
-                                </div>
-                                <div id="tabs-2">
-                                    <div>        
-                                        <aside id="leagueSA">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueSoccer2">
-                                                </section>
-                                            </section>
-                                            <section>
-                                                <h4>Top Scorers</h4>
-                                            </section>
-                                        </aside>
-                                    </div>        
-                                </div>
-                                <div id="tabs-3">
-                                    <div>
-                                        <aside id="leagueB1">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueSoccer3">
-                                                </section>
-                                            </section>
-                                            <section>
-                                                <h4>Matches</h4>
-                                                <h5>Match 1</h5>
-                                                <h5>Match 2</h5>
-                                                <h5>Match 3</h5>
-                                                <h5>Match 4</h5>
-                                                <h5>Match 5</h5>
-                                                <h5>Match 6</h5>
-                                            </section>
-                                            <section>
-                                                <h4>Top Scorers</h4>
-                                                <h5>Player 1</h5>
-                                                <h5>Player 2</h5>
-                                                <h5>Player 3</h5>
-                                                <h5>Player 4</h5>
-                                                <h5>Player 5</h5>
-                                                <h5>Player 6</h5>
-                                            </section>   
-                                        </aside>
-                                    </div>
-                                </div>
-                                <div id="tabs-4">
-                                    <div>        
-                                        <aside id="leaguePD">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueSoccer4">
-                                                </section>
-                                            </section>
-                                        </aside>
-                                    </div>        
-                                </div>
-                            </div>
-                        </article>
-                    </section>
-                </div>
-            </section>
-            <section id="hockey" class="hide">
-                <div>
-                    <section>
-                        <article>
-                            <div id="tabs2" >
-                                <ul >
-                                    <li><a href="#tabs-5">NHL</a></li>
-                                    <li><a href="#tabs-6">AHL</a></li>
-                                    <li><a href="#tabs-7">OHL</a></li>
-                                </ul>
-                                <div id="tabs-5">
-                                    <div>      
-                                        <aside id="leagueNHL">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueHockey1">
-                                                </section>
-                                            </section>
-                                            <section>
-                                                <h4>Top Scorers</h4>
-                                            </section>
-                                        </aside>
-                                    </div>
-                                </div>
-                                <div id="tabs-6">
-                                    <div>        
-                                        <aside id="leagueAHL">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueHockey2">
-                                                </section>
-                                            </section>
-                                            <section>
-                                                <h4>Top Scorers</h4>
-                                            </section>
-                                        </aside>
-                                    </div>        
-                                </div>
-                                <div id="tabs-7">
-                                    <div>
-                                        <aside id="leagueOHL">
-                                            <section>
-                                                <h4>Teams</h4>
-                                                <section id="leagueHockey3">
-                                                </section>
-                                            </section>
-                                            <section>
-                                                <h4>Top Scorers</h4>
-                                            </section>   
-                                        </aside>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </section>
-                </div>
-            </section>
+<fieldset class="fieldset">
+    <h3 id="querySearch">Query Search</h3>
+    <aside>
+        <section class="" id="accordion">
+            <h3>Instructions</h3>
+            <article>
+                <p>
+                    Please follow the following instruction for each 
+                    section, to retrieve the desired information.
+                    <ul>
+                        <li>League Teams: Please include the name of the country 
+                            and the name of the league you want to recieve back. For 
+                            both soccer and hockey leagues/cups.
+                        </li>
+                        <li>Team Players: Please include the full name of the team if the 
+                            shorthand name does not work. Only for soccer teams.
+                        </li>
+                        <li> League/Cup Top Scorers: Please include the name of the country and
+                            the name of the league you want to view its top scorers. Only 
+                            for soccer leagues/cups.
+                        </li>
+                    </ul>
+                </p>
+            </article>
+            <h3>League Teams</h3>
+            <article class="leagueSearchSection">
+                <p>
+                    You can search for the teams of a given league/cup.
+                    <br>
+                    Please follow the example bellow for input format.
+                </p>
+                <textarea id="searchLeagueInfo" type="text" placeholder="Sport, League/Cup, Country"></textarea>
+                <button id="searchLeagueBtn">Search</button>
+                <section class="searchLeagueHistory">
+                </section>
+            </article>
+            <h3>Team Players</h3>
+            <article class="playersSearchSection">
+                <p>
+                    You can search for the players of a given team.
+                    <br>
+                    Please follow the example bellow for input format.
+                </p>
+                <textarea id="searchPlayersInfo" type="text" placeholder="Soccer, League/Cup, Country, TeamName"></textarea>
+                <button id="searchPlayersBtn">Search</button>
+                <section class="searchPlayersHistory">
+                </section>
+            </article>
+            <h3>League/Cup Top Scorers</h3>
+            <article class="topSearchSection">
+                <p>
+                    You can search for the top scorers of a given league/cup.
+                    <br>
+                    Please follow the example bellow for input format.
+                </p>
+                <textarea id="searchTopInfo" type="text" placeholder="Soccer, League/Cup, Country"></textarea>
+                <button id="searchTopBtn">Search</button>
+                <section class="searchTopHistory">
+                </section>
+            </article>
         </section>
-
-
-      </fieldset>
+    </aside>
+</fieldset>
     </div>
+    <fieldset class="fieldset">
+        <legend> <h2>Search Results</h2> </legend>
+        <section class="showResult"></section>
+        <button class="button button2" id="deleteSearch">Delete</button>
+    </fieldset>
 
     <fieldset class="fieldset">
       <h3>Live Tweets</h3>
