@@ -109,30 +109,10 @@ body {
     
 }
 
-
-
-/* Media queries for Instruction in accordion
-@media screen and (max-width: 725px) {
-  .instructions {
-    margin-bottom: 80px;
+@media screen and (max-width: 370px) {
+  #soccer, #ice-hockey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-
-@media screen and (max-width: 533px) {
-  .instructions {
-    margin-bottom: 150px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .instructions {
-    margin-bottom: 200px;
-  }
-} */
-
-
-/* @media screen and (max-width: 425px) {
-  .leagueSearchSection {
-    margin-bottom: 25px;
-  }
-} */
