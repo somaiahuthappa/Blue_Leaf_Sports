@@ -96,7 +96,22 @@ body {
   flex-direction: column;
 }
 
-/* Media queries for Instruction in accordion */
+@media screen and (max-width: 595px) {
+  .header-img {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #orbit {
+    display: none;
+  }
+    
+}
+
+
+
+/* Media queries for Instruction in accordion
 @media screen and (max-width: 725px) {
   .instructions {
     margin-bottom: 80px;
@@ -113,4 +128,11 @@ body {
   .instructions {
     margin-bottom: 200px;
   }
-}
+} */
+
+
+/* @media screen and (max-width: 425px) {
+  .leagueSearchSection {
+    margin-bottom: 25px;
+  }
+} */
