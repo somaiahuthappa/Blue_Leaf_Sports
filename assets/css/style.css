@@ -11,6 +11,12 @@ body {
   color: whitesmoke;
 }
 
+/* reveal background color */
+.reveal {
+  background: url("../images/blue-bg.jpg");
+  background-attachment: fixed;
+}
+
 /* Logo image style */
 .header-img {
   display: inline;
@@ -24,10 +30,6 @@ body {
   justify-content: space-around;
 }
 
-/* Reveal text color */
-.reveal {
-  color: black;
-}
 /* My CSS */
 /* body {
   z-index: 9999;
