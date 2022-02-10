@@ -30,7 +30,9 @@ body {
   justify-content: space-around;
 }
 
+
 /* Title - Brand Logo */
+
 .logo h1 {
   font-family: "Audiowide", cursive;
   font-family: "Open Sans", sans-serif;
@@ -74,14 +76,17 @@ body {
 /* media query for the header and nav section on small screens */
 @media screen and (max-width: 595px) {
   .header-img {
+
     display: flex;
     align-items: center;
     flex-direction: column;
   }
+
 }
 
 /* media query to display league icons on small screens */
 @media screen and (max-width: 370px) {
+
   #soccer,
   #ice-hockey {
     display: flex;
