@@ -100,6 +100,7 @@
     </div>
   </div>
 
+
   <!-- Soccer League thumbnails -->
   <div class="row">
     <fieldset id="soccer" class="fieldset soccer">
@@ -114,65 +115,570 @@
           height="80" width="100" /></button>
     </fieldset>
 
-    <!-- Premier League reveal -->
-    <div class="reveal large" aria-labelledby="team-cards" id="premier-league" data-reveal data-animation-in="fade-in"
-      data-multiple-opened="true" data-animation-out="fade-out">
-      <h1 id="team-cards">Premier League</h1>
-      <p class="lead">Premier League Cards</p>
-      <button class="button" data-open="premier-league-info" id="team-info">Team Information</button>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <soccerLeagueslModals>
+        <!-- This is the modal for the Premier League. -->
+        <section class="reveal large" aria-labelledby="team-cards" id="premier-league" data-reveal data-animation-in="fade-in"
+            data-multiple-opened="true" data-animation-out="fade-out">
+            <h1 id="team-cards">Premier League</h1>
+            <p class="lead">Premier League Cards</p>
+            <section class="premierLTCC"></section>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
 
-    <!-- Premier League Teams Info reveal -->
-    <div class="medium reveal" aria-labelledby="team-info" id="premier-league-info" data-reveal
-      data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
-      <h2 id="team-info">Premier League Team Information</h2>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for the Serie A.-->
+        <section class="reveal large" aria-labelledby="team-cards" id="serie-a" data-reveal data-animation-in="fade-in"
+            data-multiple-opened="true" data-animation-out="fade-out">
+            <h1 id="team-cards">Serie-A</h1>
+            <p class="lead">Seri-A cards</p>
+            <section class="serieATCC"></section>
+            <!-- <button class="button" data-open="serie-a-info" id="team-info">Team Information</button> -->
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
 
-    <!-- Serie-A League reveal -->
-    <div class="reveal large" aria-labelledby="team-cards" id="serie-a" data-reveal data-animation-in="fade-in"
-      data-multiple-opened="true" data-animation-out="fade-out">
-      <h1 id="team-cards">Serie-A</h1>
-      <p class="lead">Seri-A cards</p>
-      <button class="button" data-open="serie-a-info" id="team-info">Team Information</button>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for the Bundesliga 1. -->
+        <section class="reveal large" aria-labelledby="team-cards" id="bundesliga" data-reveal data-animation-in="fade-in"
+            data-multiple-opened="true" data-animation-out="fade-out">
+            <h1 id="team-cards">Bundesliga 1</h1>
+            <p class="lead">Bundesliga 1 cards</p>
+            <section class="bundesliga1TCC"></section>
+            <!-- <button class="button" data-open="bundesliga-info" id="team-info">Team Information</button> -->
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </soccerLeagueslModals>
 
-    <!-- Serie-A League Teams Info reveal -->
-    <div class="medium reveal" aria-labelledby="team-info" id="serie-a-info" data-reveal data-multiple-opened="true"
-      data-animation-in="fade-in" data-animation-out="fade-out">
-      <h2 id="team-info">Seri-A Team Information</h2>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <soccerTeamsPLModals>
+        <!-- This is the modal for Manchester United. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ManchesterUnited" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Manchester United</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
 
-    <!-- Bundesliga League reveal -->
-    <div class="reveal large" aria-labelledby="team-cards" id="bundesliga" data-reveal data-animation-in="fade-in"
-      data-multiple-opened="true" data-animation-out="fade-out">
-      <h1 id="team-cards">Serie-A</h1>
-      <p class="lead">Seri-A cards</p>
-      <button class="button" data-open="bundesliga-info" id="team-info">Team Information</button>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for Newcastle. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Newcastle" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Newcastle</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
 
-    <!-- Bundesliga League Teams Info reveal -->
-    <div class="medium reveal" aria-labelledby="team-info" id="bundesliga-info" data-reveal data-multiple-opened="true"
-      data-animation-in="fade-in" data-animation-out="fade-out">
-      <h2 id="team-info">Seri-A Team Information</h2>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for Watford. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Watford" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Watford</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Wolves. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Wolves" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Wolves</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Liverpool -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Liverpool" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Liverpool</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Southampton. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Southampton" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Southampton</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Arsenal. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Arsenal" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Arsenal</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Burnley -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Burnley" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Burnley</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Everton. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Everton" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Everton</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Leicester. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Leicester" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Leicester</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Tottenham. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Tottenham" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Tottenham</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for West Ham. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="WestHam" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">West Ham</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Chelsea. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Chelsea" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Chelsea</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Manchester City. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ManchesterCity" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Manchester City</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Brighton. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Brighton" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Brighton</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Crystal Palace. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="CrystalPalace" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Crystal Palace</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Brentford. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Brentford" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Brentford</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Leeds. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Leeds" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Leeds</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Aston Villa. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="AstonVilla" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Aston Villa</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Norwich. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Norwich" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Norwich</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </soccerTeamsPLModals>
+
+    <soccerTeamsSAModals>
+        <!-- This is the modal for Lazio. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Lazio" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Lazio</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Sassuolo. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Sassuolo" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Sassuolo</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for AC Milan. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ACMilan" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">AC Milan</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Cagliari. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Cagliari" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Cagliari</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Napoli. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Napoli" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Napoli</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Udinese. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Udinese" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Udinese</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Genoa. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Genoa" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Genoa</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Juventus. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Juventus" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Juventus</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for AS Roma. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ASRoma" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">AS Roma</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Sampdoria. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Sampdoria" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Sampdoria</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Atalanta. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Atalanta" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Atalanta</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Bologna. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Bologna" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Bologna</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Fiorentina. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Fiorentina" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Fiorentina</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Torino. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Torino" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Torino</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Verona. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Verona" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Verona</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Inter. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Inter" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Inter</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Empoli. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Empoli" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Empoli</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Salernitana. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Salernitana" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Salernitana</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Spezia. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Spezia" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Spezia</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Venezia. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Venezia" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Venezia</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </soccerTeamsSAModals>
+
+    <soccerTeamsB1Modals>
+        <!-- This is the modal for Bayern Munich. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BayernMunich" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Bayern Munich</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Hertha Berlin. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="HerthaBerlin" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Hertha Berlin</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for SC Freiburg. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SCFreiburg" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">SC Freiburg</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for VfL Wolfsburg. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="VfLWolfsburg" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">VfL Wolfsburg</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Borussia Monchengladbach. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BorussiaMonchengladbach" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Borussia Monchengladbach</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for FSV Mainz 05. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="FSVMainz05" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">FSV Mainz 05</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Borussia Dortmund. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BorussiaDortmund" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Borussia Dortmund</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for 1899 Hoffenheim. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="1899Hoffenheim" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">1899 Hoffenheim</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Bayer Leverkusen. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BayerLeverkusen" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Bayer Leverkusen</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Eintracht Frankfurt. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="EintrachtFrankfurt" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Eintracht Frankfurt</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for FC Augsburg. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="FCAugsburg" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">FC Augsburg</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for VfB Stuttgart. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="VfBStuttgart" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">VfB Stuttgart</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for RB Leipzig. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="RBLeipzig" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">RB Leipzig</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for VfL BOCHUM. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="VfLBOCHUM" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">VfL BOCHUM</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for SpVgg Greuther Furth. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SpVggGreutherFurth" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">SpVgg Greuther Furth</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Union Berlin. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="UnionBerlin" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Union Berlin</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Arminia Bielefeld. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ArminiaBielefeld" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Arminia Bielefeld</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for FC Koln. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="FCKoln" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">FC Koln</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </soccerTeamsB1Modals>
 
     <!-- hockey league thumbnails -->
     <fieldset class="fieldset hockey" id="ice-hockey">
@@ -187,65 +693,829 @@
           height="80" width="100" /></button>
     </fieldset>
 
-    <!-- NHL reveal -->
-    <div class="reveal large" aria-labelledby="team-cards" id="nhl" data-reveal data-animation-in="fade-in"
-      data-multiple-opened="true" data-animation-out="fade-out">
-      <h1 id="team-cards">NHL</h1>
-      <p class="lead">NHL cards</p>
-      <button class="button" data-open="nhl-info" id="team-info">Team Information</button>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <hockeyLeaguesModals>
+        <!-- This is the modal for the NHL. -->
+        <div class="reveal large" aria-labelledby="team-cards" id="nhl" data-reveal data-animation-in="fade-in"
+            data-multiple-opened="true" data-animation-out="fade-out">
+            <h1 id="team-cards">NHL</h1>
+            <p class="lead">NHL cards</p>
+            <section class="nHLTCC"></section>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
 
-    <!-- NHL Teams Info reveal -->
-    <div class="medium reveal" aria-labelledby="team-info" id="nhl-info" data-reveal data-multiple-opened="true"
-      data-animation-in="fade-in" data-animation-out="fade-out">
-      <h2 id="team-info">NHL Team Information</h2>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal For the OHL. -->
+        <div class="reveal large" aria-labelledby="team-cards" id="ohl" data-reveal data-animation-in="fade-in"
+            data-multiple-opened="true" data-animation-out="fade-out">
+            <h1 id="team-cards">OHL</h1>
+            <p class="lead">OHL cards</p>
+            <section class="oHLTCC"></section>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
 
-    <!-- OHL reveal -->
-    <div class="reveal large" aria-labelledby="team-cards" id="ohl" data-reveal data-animation-in="fade-in"
-      data-multiple-opened="true" data-animation-out="fade-out">
-      <h1 id="team-cards">OHL</h1>
-      <p class="lead">OHL cards</p>
-      <button class="button" data-open="ohl-info" id="team-info">Team Information</button>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for the AHL. -->
+        <div class="reveal large" aria-labelledby="team-cards" id="ahl" data-reveal data-animation-in="fade-in"
+            data-multiple-opened="true" data-animation-out="fade-out">
+            <h1 id="team-cards">AHL</h1>
+            <p class="lead">AHL cards</p>
+            <section class="aHLTCC"></section>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>  
+    </hockeyLeaguesModals>
 
-    <!-- OHL Teams Info reveal -->
-    <div class="medium reveal" aria-labelledby="team-info" id="ohl-info" data-reveal data-multiple-opened="true"
-      data-animation-in="fade-in" data-animation-out="fade-out">
-      <h2 id="team-info">OHL Team Information</h2>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <hockeyTeamsNHLModals>
+        <!-- This is the modal for Anaheim Ducks. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="AnaheimDucks" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Anaheim Ducks</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
 
-    <!-- AHL reveal -->
-    <div class="reveal large" aria-labelledby="team-cards" id="ahl" data-reveal data-animation-in="fade-in"
-      data-multiple-opened="true" data-animation-out="fade-out">
-      <h1 id="team-cards">AHL</h1>
-      <p class="lead">AHL cards</p>
-      <button class="button" data-open="ahl-info" id="team-info">Team Information</button>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for Arizona Coyotes. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ArizonaCoyotes" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Arizona Coyotes</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
 
-    <!-- AHL Teams Info reveal -->
-    <div class="medium reveal" aria-labelledby="team-info" id="ahl-info" data-reveal data-multiple-opened="true"
-      data-animation-in="fade-in" data-animation-out="fade-out">
-      <h2 id="team-info">AHL Team Information</h2>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+        <!-- This is the modal for Atlantic Division. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="AtlanticDivision" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Atlantic Division</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Boston Bruins. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BostonBruins" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Boston Bruins</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Buffalo Sabres. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BuffaloSabres" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Buffalo Sabres</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Calgary Flames. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="CalgaryFlames" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Calgary Flames</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Carolina Hurricanes. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="CarolinaHurricanes" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Carolina Hurricanes</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Central Divison. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="CentralDivison" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Central Divison</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Chicago Blackhawks. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ChicagoBlackhawks" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Chicago Blackhawks</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Colorado Avalanche. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ColoradoAvalanche" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Colorado Avalanche</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Columbus Blue Jackets. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ColumbusBlueJackets" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Columbus Blue Jackets</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Dallas Stars. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="DallasStars" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Dallas Stars</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Detroit Red Wings. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="DetroitRedWings" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Detroit Red Wings</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Edmonton Oilers. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="EdmontonOilers" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Edmonton Oilers</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Florida Panthers. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="FloridaPanthers" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Florida Panthers</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Los Angeles Kings. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="LosAngelesKings" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Los Angeles Kings</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Metropolitan Division. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="MetropolitanDivision" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Metropolitan Division</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Minnesota Wild. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="MinnesotaWild" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Minnesota Wild</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Montreal Canadiens. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="MontrealCanadiens" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Montreal Canadiens</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Nashville Predators. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="NashvillePredators" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Nashville Predators</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for New Jersey Devils. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="NewJerseyDevils" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">New Jersey Devils</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for New York Islanders. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="NewYorkIslanders" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">New York Islanders</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for New York Ranges. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="NewYorkRanges" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">New York Ranges</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Ottawa Senators. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="OttawaSenators" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Ottawa Senators</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+        
+        <!-- This is the modal for Pacific Division. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="PacificDivision" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Pacific Division</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Philadelphia Flyers. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="PhiladelphiaFlyers" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Philadelphia Flyers</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Pittsburgh Penguins. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="PittsburghPenguins" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Pittsburgh Penguins</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for San Jose Sharks. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SanJoseSharks" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">San Jose Sharks</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Seattle Kraken. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SeattleKraken" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Seattle Kraken</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for St. Louis Blues. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="StLouisBlues" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">St. Louis Blues</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Tampa Bay Lightning. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="TampaBayLightning" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Tampa Bay Lightning</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Toronto Maple Leafs. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="TorontoMapleLeafs" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Toronto Maple Leafs</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Vancouver Canucks. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="VancouverCanucks" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Vancouver Canucks</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Vegas Golden Knights. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="VegasGoldenKnights" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Vegas Golden Knights</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Washington Capitals. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="WashingtonCapitals" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Washington Capitals</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Winnipeg Jets. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="WinnipegJets" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Winnipeg Jets</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </hockeyTeamsNHLModals>
+
+    <hockeyTeamsAHLModals>
+        <!-- This is the modal for Abbotsford Canucks. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="AbbotsfordCanucks" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Abbotsford Canucks</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Bakersfield Condors. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BakersfieldCondors" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Bakersfield Condors</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Belleville Senators. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BellevilleSenators" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Belleville Senators</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Bridgeport Islanders. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BridgeportIslanders" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Bridgeport Islanders</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Charlotte Checkers. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="CharlotteCheckers" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Charlotte Checkers</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Chicago Wolves. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ChicagoWolves" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Chicago Wolves</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Cleveland Monsters. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ClevelandMonsters" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Cleveland Monsters</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Colorado Eagles. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ColoradoEagles" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Colorado Eagles</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Grand Rapids Griffins. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="GrandRapidsGriffins" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Grand Rapids Griffins</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Hartford Wolf Pack. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="HartfordWolfPack" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Hartford Wolf Pack</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Henderson Silver Knights. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="HendersonSilverKnights" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Henderson Silver Knights</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Hershey Bears. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="HersheyBears" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Hershey Bears</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Iowa Wild. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="IowaWild" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Iowa Wild</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Laval Rocket. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="LavalRocket" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Laval Rocket</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Lehigh Valley Phantoms. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="LehighValleyPhantoms" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Lehigh Valley Phantoms</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Manitoba Moose. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ManitobaMoose" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Manitoba Moose</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Milwaukee Admirals. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="MilwaukeeAdmirals" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Milwaukee Admirals</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Ontario Reign. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="OntarioReign" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Ontario Reign</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Providence Bruins. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ProvidenceBruins" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Providence Bruins</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Rochester Americans. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="RochesterAmericans" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Rochester Americans</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Rockford Icehogs. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="RockfordIcehogs" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Rockford Icehogs</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for San Diego Gulls. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SanDiegoGulls" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">San Diego Gulls</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for San Jose Barracuda. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SanJoseBarracuda" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">San Jose Barracuda</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Springfield Thunderbirds. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SpringfieldThunderbirds" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Springfield Thunderbirds</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+        
+        <!-- This is the modal for Stockton Heat. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="StocktonHeat" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Stockton Heat</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Syracuse Crunch. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SyracuseCrunch" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Syracuse Crunch</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Texas Stars. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="TexasStars" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Texas Stars</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Toronto Marlies. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="TorontoMarlies" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Toronto Marlies</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Tucson Roadrunners. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="TucsonRoadrunners" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Tucson Roadrunners</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Utica Comets. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="UticaComets" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Utica Comets</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Wilkie-Barre/Scranton. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="WilkesBarreScranton" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Wilkie-Barre/Scranton</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </hockeyTeamsAHLModals>
+
+    <hockeyTeamsOHLModals>
+        <!-- This is the modal for Barrie Colts. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="BarrieColts" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Barrie Colts</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Erie Otters. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="ErieOtters" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Erie Otters</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Flint Firebirds. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="FlintFirebirds" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Flint Firebirds</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Guelph Storm. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="GuelphStorm" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Guelph Storm</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Hamilton Bulldogs. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="HamiltonBulldogs" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Hamilton Bulldogs</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Kingston Frontenacs. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="KingstonFrontenacs" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Kingston Frontenacs</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Kitchener Rangers. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="KitchenerRangers" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Kitchener Rangers</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for London Knights. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="LondonKnights" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">London Knights</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Mississauga Steelheads. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="MississaugaSteelheads" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Mississauga Steelheads</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Niagara IceDogs. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="NiagaraIceDogs" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Niagara IceDogs</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for North Bay Battalion. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="NorthBayBattalion" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">North Bay Battalion</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Oshawa Generals. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="OshawaGenerals" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Oshawa Generals</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Ottawa 67s. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="Ottawa67s" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Ottawa 67s</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Owen Sound Attack. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="OwenSoundAttack" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Owen Sound Attack</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Peterborough Petes. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="PeterboroughPetes" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Peterborough Petes</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+        
+        <!-- This is the modal for Sagnaw Spirit. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SagnawSpirit" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Sagnaw Spirit</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Sarnia Sting. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SarniaSting" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Sarnia Sting</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Soo Greyhounds. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SooGreyhounds" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Soo Greyhounds</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Sudbury Wolves. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="SudburyWolves" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Sudbury Wolves</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+
+        <!-- This is the modal for Windsor Spitfires. -->
+        <section class="medium reveal" aria-labelledby="team-info" id="WindsorSpitfires" data-reveal
+            data-multiple-opened="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            <h2 id="team-info">Windsor Spitfires</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </section>
+    </hockeyTeamsOHLModals>
 
     <!-- Accordion Section -->
     <fieldset class="fieldset">
@@ -304,7 +1574,6 @@
           </section>
         </article>
 
-
         <!-- search top scorers -->
         <h3>League/Cup Top Scorers</h3>
         <article class="topSearchSection">
@@ -342,18 +1611,14 @@
   </div>
 
   <!-- Javascript File(s) -->
-  <!-- Foundation CSS Framework JS -->
-  <script src="./assets/js/vendor/jquery.js"></script>
-  <script src="./assets/js/vendor/what-input.js"></script>
-  <script src="./assets/js/vendor/foundation.js"></script>
-  <script src="./assets/js/vendor/app.js"></script>
-  <!-- jQuery -->
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <!-- jQuery UI -->
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-  <!-- Personal JS -->
   <script src="./assets/js/script.js"></script>
-  <!-- Accordion function -->
+
   <script>
     $(function () {
       $("#accordion").accordion();

@@ -2,7 +2,8 @@ var searchPlayersHistoryId = 0;
 var searchTopHistoryId = 0;
 var searchLeagueHistoryId = 0;
 
-
+//This function it used to load save items into the wenpage.
+//There are three sets of saved variables, one for each type of available seaarch.
 function loadSearchHistory() {
     var array = ["Players", "Top", "League"]
     for (let index = 0; index < array.length; index++) {
@@ -11,7 +12,10 @@ function loadSearchHistory() {
         for (var i = 0; i < size; i++) {
             var key = "search" + array[index] + i;
             var text = JSON.parse(localStorage.getItem(key));
+            var divEL = $("<div>");
+            divEL.addClass("stacked-for-small button-group");
             var historyButton = $("<button>");
+            historyButton.addClass("button");
             //historyButton.addClass("col-12 my-2 btn btn-secondary");
             historyButton.attr("id", key);
             historyButton.text(text);
@@ -38,14 +42,15 @@ function loadSearchHistory() {
 
 loadSearchHistory();
 
+//Function used to populate the cards for the six provided leagues on the webpage.
 function populateCards() {
-    var leagueCall = [39, 135, 78, 162, 57, 58, 3];
-    var leagues = [$("#leagueSoccer1"), $("#leagueSoccer2"), $("#leagueSoccer3"), $("#leagueSoccer4"), $("#leagueHockey1"), $("#leagueHockey2"), $("#leagueHockey3")];
+    var leagueCall = [39, 135, 78, 57, 3, 58];
+    var leagues = [$(".premierLTCC"), $(".serieATCC"), $(".bundesliga1TCC"), $(".nHLTCC"), $(".aHLTCC"), $(".oHLTCC")];
     let elementIndex = 0;
     var api = "";
     var host = "";
     for (let index = 0; index < leagueCall.length; index++) {
-        if (elementIndex < 4) {
+        if (elementIndex < 3) {
         api = "https://api-football-v1.p.rapidapi.com/v3/teams?league=";
         host = "api-football-v1.p.rapidapi.com";
         } else {
@@ -59,7 +64,7 @@ function populateCards() {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": host,
-                "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                "x-rapidapi-key": "Please add your key here"
             }
         };
         elementIndex++;
@@ -70,7 +75,6 @@ function populateCards() {
                 case "39":
                 case "135":
                 case "78":
-                case "162":
                     sport = "soccer";
                     switch (data.parameters.league) {
                         case "39":
@@ -82,9 +86,6 @@ function populateCards() {
                         case "78":
                             var leagueEl = leagues[2];
                             break;
-                        case "162":
-                            var leagueEl = leagues[3];
-                            break;
                         }
                     break;
                 case "57":
@@ -93,28 +94,50 @@ function populateCards() {
                     sport = "hockey";
                     switch (data.parameters.league) {
                         case "57":
-                            var leagueEl = leagues[4];
+                            var leagueEl = leagues[3];
                             break;
                         case "58":
-                            var leagueEl = leagues[5];
+                            var leagueEl = leagues[4];
                             break;
                         case "3":
-                            var leagueEl = leagues[6];
+                            var leagueEl = leagues[5];
                             break;
                     }
                     break;
             }
             
+            //First Modal.
             if (sport === "soccer") {
                 for (let index = 0; index < data.response.length; index++) {
-                    var cardEl = $("<div>");
-                    cardEl.addClass("card");
-                    cardEl.appendTo(leagueEl);
+                    var buttonEl = $("<button>");
+                    buttonEl.addClass("button");
+                        var helper = data.response[index].team.name;
+                        helper = helper.replace(/\s/g, '');
+                    switch (data.parameters.league) {
+                        case "39":
+                            buttonEl.attr("data-open", helper);
+                            break;
+                        case "135":
+                            buttonEl.attr("data-open", helper);
+                            break;
+                        case "78":
+                            buttonEl.attr("data-open", helper);
+                            break;
+                        default:
+                            break;
+                    }
+                    //For the clickable team card.
+                    buttonEl.attr("id", "team-info" + helper);
+                    buttonEl.appendTo(leagueEl);
 
-                    var imgEl = $("<img>");
-                    imgEl.attr("src", data.response[index].team.logo);
-                    imgEl.attr("id", "team-logo");
-                    imgEl.appendTo(cardEl);
+                    var cardEl = $("<article>");
+                    cardEl.addClass("card");
+                    cardEl.appendTo(buttonEl);
+
+                    var logoEl = $("<img>");
+                    logoEl.attr("src", data.response[index].team.logo);
+                    logoEl.attr("id", "team-logo");
+                    logoEl.appendTo(cardEl);
 
                     var cardSectionEl = $("<div>");
                     cardSectionEl.addClass("card-section");
@@ -131,27 +154,66 @@ function populateCards() {
                     cardDividerEl.addClass("card-divider");
                     cardDividerEl.appendTo(cardEl);
 
-                    var listEl = $("<ul>");
-                    listEl.appendTo(cardDividerEl);
+                    var paraEl = $("<p>");
+                    paraEl.text("Click this card for more information");
+                    paraEl.appendTo(cardDividerEl);
 
-                    var listItem1El = $("<li>");
-                    listItem1El.appendTo(listEl);
+                    //For the team information.
+                    var id = "#" + helper;
+                    var sectionEl = $(id);
 
-                    var linkEl = $("<a>");
-                    linkEl.attr("href", "#");
-                    linkEl.text("Team website");
-                    linkEl.appendTo(listItem1El);
+                    var teamInfoEl = $("<p>");
+                    teamInfoEl.text("Date of Foundation: " + data.response[index].team.founded);
+                    teamInfoEl.appendTo(sectionEl);
+
+                    var imgEl = $("<img>");
+                    imgEl.attr("src", data.response[index].venue.image);
+                    imgEl.appendTo(sectionEl);
+
+                    var venueEl = $("<h2>");
+                    venueEl.text(data.response[index].venue.name);
+                    venueEl.appendTo(sectionEl);
+
+                    var venueInfoEl = $("<p>");
+                    venueInfoEl.html("Capacity of venue: " + data.response[index].venue.capacity +
+                    "<br>" + "Type of grass: " + data.response[index].venue.surface);
+                    venueInfoEl.appendTo(sectionEl);
                 }
             } else if (sport === "hockey") {
                 for (let index = 0; index < data.response.length; index++) {
-                    var cardEl = $("<div>");
-                    cardEl.addClass("card");
-                    cardEl.appendTo(leagueEl);
+                    var buttonEl = $("<button>");
+                    buttonEl.addClass("button");
+                    var helper = data.response[index].name;
+                        helper = helper.replace(/\s/g, '');
+                        if (data.response[index].name == "St.LouisBlues") {
+                            helper = "StLouisBlues"
+                        } else if (data.response[index].name == "Wilkes-Barre/Scranton") {
+                            helper = "WilkesBarreScranton";
+                        }
+                    switch (data.parameters.league) {
+                        case "57":
+                            buttonEl.attr("data-open", helper);
+                            break;
+                        case "58":
+                            buttonEl.attr("data-open", helper);
+                            break;
+                        case "3":
+                            buttonEl.attr("data-open", helper);
+                            break;
+                        default:
+                            break;
+                    }
+                    buttonEl.attr("id", "team-info" + helper);
+                    buttonEl.appendTo(leagueEl);
 
-                    var imgEl = $("<img>");
-                    imgEl.attr("src", data.response[index].logo);
-                    imgEl.attr("id", "team-logo");
-                    imgEl.appendTo(cardEl);
+                    var cardEl = $("<article>");
+                    cardEl.addClass("card");
+                    cardEl.appendTo(buttonEl);
+
+                    var logoEl = $("<img>");
+                    logoEl.attr("src", data.response[index].logo);
+                    logoEl.attr("id", "team-logo");
+                    logoEl.appendTo(cardEl);
 
                     var cardSectionEl = $("<div>");
                     cardSectionEl.addClass("card-section");
@@ -168,22 +230,31 @@ function populateCards() {
                     cardDividerEl.addClass("card-divider");
                     cardDividerEl.appendTo(cardEl);
 
-                    var listEl = $("<ul>");
-                    listEl.appendTo(cardDividerEl);
+                    var paraEl = $("<p>");
+                    paraEl.text("Click this card for more information");
+                    paraEl.appendTo(cardDividerEl);
 
-                    var listItem1El = $("<li>");
-                    listItem1El.appendTo(listEl);
+                    var id = "#" + helper;
+                    var sectionEl = $(id);
 
-                    var linkEl = $("<a>");
-                    linkEl.attr("href", "#");
-                    linkEl.text("Team website");
-                    linkEl.appendTo(listItem1El);
+                    var logoEl = $("<img>");
+                    logoEl.attr("src", data.response[index].logo);
+                    logoEl.attr("id", "team-logo");
+                    logoEl.appendTo(sectionEl);
+
+                    var teamInfoEl = $("<p>");
+                    teamInfoEl.html("Date of Foundation: " + data.response[index].founded + 
+                    "<br>" + "Arena Name: " + data.response[index].arena.name);
+                    teamInfoEl.appendTo(sectionEl);
                 }
             } else {}
         });
     }
 }
 
+populateCards();
+
+//Function used to take user input and provied an answer releted to the input.
 function searchQuery(parameters, update, searchQueryType) {
     //debugger;
     if (parameters[0] === "Soccer") {
@@ -194,7 +265,7 @@ function searchQuery(parameters, update, searchQueryType) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                "x-rapidapi-key": "Please add your key here"
             }
         };
         //This gives us the ID of a league.
@@ -210,13 +281,11 @@ function searchQuery(parameters, update, searchQueryType) {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                        "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                        "x-rapidapi-key": "Please add your key here"
                     }
                 };
                 //This gives us the teams of the league.
                 $.ajax(settings).done(function (data) {
-                    console.log(data);
-                    console.log("This should give me the teams.");
                     if (searchQueryType === "players") {
                         for (let index = 0; index < data.response.length; index++) {
                             if (data.response[index].team.name === parameters[3].trim()) {
@@ -227,17 +296,15 @@ function searchQuery(parameters, update, searchQueryType) {
                                     "method": "GET",
                                     "headers": {
                                         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                                        "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                                        "x-rapidapi-key": "Please add your key here"
                                     }
                                 };
                                 
                                 $.ajax(settings).done(function (data) {
                                     if (update) {
                                         updateSearchHistory("Players");
-                                        console.log(data);
                                         clearSearch();
                                         showQuery(data, searchQueryType);
-                                        console.log("This should give me the players of the team.");
                                         return;
                                     }else {
                                         clearSearch();
@@ -252,7 +319,6 @@ function searchQuery(parameters, update, searchQueryType) {
                     }else if (searchQueryType === "league") {
                         if (update) {
                            updateSearchHistory("League");
-                            console.log(data);
                             clearSearch();
                             showQuery(data, searchQueryType);
                             return; 
@@ -271,14 +337,13 @@ function searchQuery(parameters, update, searchQueryType) {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                        "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                        "x-rapidapi-key": "Please add your key here"
                     }
                 };
                 
                 $.ajax(settings).done(function (data) {
                     if (update) {
                         updateSearchHistory("Top");
-                        console.log(data);
                         clearSearch();
                         showQuery(data, searchQueryType);
                         return;
@@ -299,7 +364,7 @@ function searchQuery(parameters, update, searchQueryType) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "api-hockey.p.rapidapi.com",
-                "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                "x-rapidapi-key": "Please add your key here"
             }
         };
         
@@ -311,7 +376,7 @@ function searchQuery(parameters, update, searchQueryType) {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "api-hockey.p.rapidapi.com",
-                    "x-rapidapi-key": "eb045851b7mshab1dd65c071dccap17752djsn834e9190eaa2"
+                    "x-rapidapi-key": "Please add your key here"
                 }
             };
             $.ajax(settings).done(function (data) {
@@ -320,9 +385,7 @@ function searchQuery(parameters, update, searchQueryType) {
                     updateSearchHistory("League");
                     clearSearch(); 
                     showQuery(data,searchQueryType);
-                    console.log(data);
                 }
-                console.log(data);
                 clearSearch(); 
                 showQuery(data,searchQueryType);
             });
@@ -332,13 +395,16 @@ function searchQuery(parameters, update, searchQueryType) {
     }
 }
 
+//Function used to populate the search history with valid entries from the user input.
+//Limit of eight entries for each search type.
 function updateSearchHistory(type) {
-    //debugger;
+    var divEL = $("<div>");
+    divEL.addClass("stacked-for-small button-group");
     var historyButton = $("<button>");
-    var searchId;
+    historyButton.addClass("button");
+    historyButton.appendTo(divEL);
     var text;
     var size;
-    //historyButton.addClass("");
     switch (type) {
         case "Players":
             searchId = "search" + type + searchPlayersHistoryId;
@@ -385,16 +451,15 @@ function updateSearchHistory(type) {
     historyButton.text(text);
     switch (type) {
         case "Players":
-            //debugger;
-            $(".searchPlayersHistory").append(historyButton);
+            $(".searchPlayersHistory").append(divEL);
             searchPlayersHistoryId++
             break;
         case "Top":
-            $(".searchTopHistory").append(historyButton);
+            $(".searchTopHistory").append(divEL);
             searchTopHistoryId++
             break;
         case "League":
-            $(".searchLeagueHistory").append(historyButton);
+            $(".searchLeagueHistory").append(divEL);
             searchLeagueHistoryId++
             break;
         default:
@@ -403,6 +468,7 @@ function updateSearchHistory(type) {
     saveSearchHistory(idValue, text, type); 
 }
 
+//Function used to save each user input int its own variable, depending on the search type.
 function saveSearchHistory(id, text, type) {
     localStorage.setItem(id, JSON.stringify(text));
     switch (type) {
@@ -420,14 +486,15 @@ function saveSearchHistory(id, text, type) {
     }
 }
 
+//Function used to clear the section of the webpage were query resuts are shown.
 function clearSearch() {
     var sectionEl = $(".showResult");
     sectionEl.children().remove();
 }
 
+//Function used to display answers onto the screen.
 function showQuery(data, type) {
     var sectionEl = $(".showResult");
-    //debugger;
     switch (type) {
         case "players":
             for (let index = 0; index < data.response.length; index++) {
@@ -443,7 +510,7 @@ function showQuery(data, type) {
                 playerNameEl.text(data.response[index].player.name);
                 playerNameEl.appendTo(articleEl);
 
-                playerInfoEl.text("Nationality: " + data.response[index].player.nationality +
+                playerInfoEl.html("Nationality: " + data.response[index].player.nationality +
                 "<br>" + "Age: " + data.response[index].player.age + "<br>" + "Height: " + 
                 data.response[index].player.height + "<br>" + "Position: " + 
                 data.response[index].statistics[0].games.position);
@@ -464,7 +531,7 @@ function showQuery(data, type) {
                 playerNameEl.text(data.response[index].player.name);
                 playerNameEl.appendTo(articleEl);
                 
-                infoEl.text("Team: " + data.response[index].statistics[0].team.name + 
+                infoEl.html("Team: " + data.response[index].statistics[0].team.name + 
                 "<br>" + "Goals scored: " + data.response[index].statistics[0].goals.total);
                 infoEl.appendTo(articleEl);
             }
@@ -524,6 +591,8 @@ function showQuery(data, type) {
 
 }
 
+
+//On click listner events for various buttons on the page.
 $("#searchLeagueBtn").on("click", function(){
     var search = $("#searchLeagueInfo").val();
     var query = search.split(",");
