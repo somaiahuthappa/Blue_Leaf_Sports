@@ -66,6 +66,11 @@ body {
   height: 150px;
 }
 
+/* Style for the button group in query search */
+.button-group {
+  margin-bottom: 20px;
+}
+
 /* media query for the header and nav section on small screens */
 @media screen and (max-width: 595px) {
   .header-img {
