@@ -45,7 +45,7 @@ Steps took as a team were:
 
 
 ## Preview of the web site
-![Deployed Application](https://github.com/KaitlynSkinner/Project-1/blob/25b35a394505116bd7d756ca0c5da1e2b1c2baef/assets/images/Mockup.jpgraw=true)
+![Deployed Application](https://github.com/KaitlynSkinner/Project-1/blob/25b35a394505116bd7d756ca0c5da1e2b1c2baef/assets/images/Mockup.jpg?raw=true)
 
 ## Completed web application
 ***
