@@ -64,7 +64,7 @@ function populateCards() {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": host,
-                "x-rapidapi-key": "Please add your key here"
+                "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
             }
         };
         elementIndex++;
@@ -265,7 +265,7 @@ function searchQuery(parameters, update, searchQueryType) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                "x-rapidapi-key": "Please add your key here"
+                "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
             }
         };
         //This gives us the ID of a league.
@@ -281,7 +281,7 @@ function searchQuery(parameters, update, searchQueryType) {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                        "x-rapidapi-key": "Please add your key here"
+                        "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
                     }
                 };
                 //This gives us the teams of the league.
@@ -296,7 +296,7 @@ function searchQuery(parameters, update, searchQueryType) {
                                     "method": "GET",
                                     "headers": {
                                         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                                        "x-rapidapi-key": "Please add your key here"
+                                        "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
                                     }
                                 };
                                 
@@ -337,7 +337,7 @@ function searchQuery(parameters, update, searchQueryType) {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-                        "x-rapidapi-key": "Please add your key here"
+                        "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
                     }
                 };
                 
@@ -364,7 +364,7 @@ function searchQuery(parameters, update, searchQueryType) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "api-hockey.p.rapidapi.com",
-                "x-rapidapi-key": "Please add your key here"
+                "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
             }
         };
         
@@ -376,7 +376,7 @@ function searchQuery(parameters, update, searchQueryType) {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "api-hockey.p.rapidapi.com",
-                    "x-rapidapi-key": "Please add your key here"
+                    "x-rapidapi-key": "32a781f638mshbdc6d0ae4e9348bp1611eejsn3a3dc5b6ca6b"
                 }
             };
             $.ajax(settings).done(function (data) {
