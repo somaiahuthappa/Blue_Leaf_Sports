@@ -70,7 +70,6 @@ function populateCards() {
         elementIndex++;
         $.ajax(settings).done(function (data) {
             var sport = "";
-            console.log(data);
             switch (data.parameters.league) {
                 case "39":
                 case "135":
@@ -256,7 +255,6 @@ populateCards();
 
 //Function used to take user input and provied an answer releted to the input.
 function searchQuery(parameters, update, searchQueryType) {
-    //debugger;
     if (parameters[0] === "Soccer") {
         const settings = {
             "async": true,
@@ -270,8 +268,10 @@ function searchQuery(parameters, update, searchQueryType) {
         };
         //This gives us the ID of a league.
         $.ajax(settings).done(function (data) {
-            console.log(data);
-            console.log("this should give me the id of the leage.");
+            if (data.response.length == 0) {
+                errorHandling();
+                return;
+            }
             if (searchQueryType === "league" || searchQueryType === "players") {
                 let id = data.response[0].league.id;
                 const settings = {
@@ -369,6 +369,10 @@ function searchQuery(parameters, update, searchQueryType) {
         };
         
         $.ajax(settings).done(function (data) {
+            if (data.response.length == 0) {
+                errorHandling();
+                return;
+            }
             const settings = {
                 "async": true,
                 "crossDomain": true,
@@ -591,14 +595,35 @@ function showQuery(data, type) {
 
 }
 
+function errorHandling() {
+    var bodyEl = ("body");
+    var sectionEl = $("<section>");
+    sectionEl.attr("id", "blankInputMessage");
+    sectionEl.attr("title", "Input Error");
+    sectionEl.appendTo(bodyEl);
+
+    var paraEl = $("<p>");
+        paraEl.html("You seem to have forgotten to enter a search query" +
+        " or have entered an invalid search query.<br><strong>Please enter"
+        + " a query for the result you want to see.</strong>");
+    paraEl.appendTo(sectionEl);
+    $("#blankInputMessage").dialog({
+        modal: true,
+        buttons: {
+        Ok: function() {
+            $( this ).dialog( "close" );
+            sectionEl.remove();
+            }
+        }
+    });
+}
 
 //On click listner events for various buttons on the page.
 $("#searchLeagueBtn").on("click", function(){
     var search = $("#searchLeagueInfo").val();
     var query = search.split(",");
-    console.log(query);
     if (!search){
-        alert("Please enter the name of the league/cup and country.");
+        errorHandling();
     } else {
         searchQuery(query, true, "league");
     }
@@ -607,16 +632,14 @@ $("#searchLeagueBtn").on("click", function(){
 $(".searchLeagueHistory").on("click", "button", function(){
     var search = $(this).text();
     var query = search.split(",");
-    // cityName = query;
     searchQuery(query, false, "league");
 });
 
 $("#searchTopBtn").on("click", function(){
     var search = $("#searchTopInfo").val();
     var query = search.split(",");
-    console.log(query);
     if (!search || query[0] === "Hockey"){
-        alert("Please enter the name of the league/cup and country.");
+        errorHandling();
     } else {
         searchQuery(query, true, "top");
     }
@@ -625,18 +648,15 @@ $("#searchTopBtn").on("click", function(){
 $(".searchTopHistory").on("click", "button", function(){
     var search = $(this).text();
     var query = search.split(",");
-    // cityName = query;
     searchQuery(query, false, "top");
 });
 
 $("#searchPlayersBtn").on("click", function(){
     var search = $("#searchPlayersInfo").val();
     var query = search.split(",");
-    console.log(query);
-    if (!search){
-        alert("Please enter the name of the league/cup and country.");
+    if (!search || query[0] === "Hockey"){
+        errorHandling();
     } else {
-        //debugger;
         searchQuery(query, true, "players");
     }
 });

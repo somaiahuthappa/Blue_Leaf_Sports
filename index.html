@@ -17,6 +17,9 @@
     rel="stylesheet">
   <!-- Favicon.ico - https://favicon.io/favicon-converter/ -->
   <link rel="shortcut icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
   <!-- Personal Stylesheet -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>BlueLeaf Sports</title>
@@ -1554,6 +1557,7 @@
             Please follow the example bellow for input format.
           </p>
           <textarea id="searchLeagueInfo" type="text" placeholder="Sport, League/Cup, Country"></textarea>
+          <p class="errorMsg hide"></p>
           <button class="button" id="searchLeagueBtn">Search</button>
           <section class="searchLeagueHistory">
           </section>
@@ -1569,6 +1573,7 @@
             Please follow the example bellow for input format.
           </p>
           <textarea id="searchPlayersInfo" type="text" placeholder="Soccer, League/Cup, Country, TeamName"></textarea>
+          <p class="errorMsg hide"></p>
           <button class="button" id="searchPlayersBtn">Search</button>
           <section class="searchPlayersHistory">
           </section>
@@ -1583,6 +1588,7 @@
             Please follow the example bellow for input format.
           </p>
           <textarea id="searchTopInfo" type="text" placeholder="Soccer, League/Cup, Country"></textarea>
+          <p class="errorMsg hide"></p>
           <button class="button" id="searchTopBtn">Search</button>
           <section class="searchTopHistory">
           </section>
@@ -1616,7 +1622,7 @@
   <script src="./assets/js/vendor/what-input.js"></script>
   <script src="./assets/js/vendor/foundation.js"></script>
   <script src="./assets/js/vendor/app.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="./assets/js/script.js"></script>
 
