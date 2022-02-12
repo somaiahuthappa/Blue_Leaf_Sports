@@ -1,3 +1,4 @@
+//These variables are used for the localStorage limit on each query search type.
 var searchPlayersHistoryId = 0;
 var searchTopHistoryId = 0;
 var searchLeagueHistoryId = 0;
@@ -16,7 +17,6 @@ function loadSearchHistory() {
             divEL.addClass("stacked-for-small button-group");
             var historyButton = $("<button>");
             historyButton.addClass("button");
-            //historyButton.addClass("col-12 my-2 btn btn-secondary");
             historyButton.attr("id", key);
             historyButton.text(text);
             switch (index) {
@@ -595,6 +595,7 @@ function showQuery(data, type) {
 
 }
 
+//Function used to handle any errors that my occur during the input of the query.
 function errorHandling() {
     var bodyEl = ("body");
     var sectionEl = $("<section>");
@@ -619,6 +620,7 @@ function errorHandling() {
 }
 
 //On click listner events for various buttons on the page.
+//Search button for the leagues search.
 $("#searchLeagueBtn").on("click", function(){
     var search = $("#searchLeagueInfo").val();
     var query = search.split(",");
@@ -629,12 +631,14 @@ $("#searchLeagueBtn").on("click", function(){
     }
 });
 
+//Search buttons for the league searches saved to history.
 $(".searchLeagueHistory").on("click", "button", function(){
     var search = $(this).text();
     var query = search.split(",");
     searchQuery(query, false, "league");
 });
 
+//Search button for the top scorers search.
 $("#searchTopBtn").on("click", function(){
     var search = $("#searchTopInfo").val();
     var query = search.split(",");
@@ -645,12 +649,14 @@ $("#searchTopBtn").on("click", function(){
     }
 });
 
+//Search buttons for the top scorer searches saved to history.
 $(".searchTopHistory").on("click", "button", function(){
     var search = $(this).text();
     var query = search.split(",");
     searchQuery(query, false, "top");
 });
 
+//Search button for the players search.
 $("#searchPlayersBtn").on("click", function(){
     var search = $("#searchPlayersInfo").val();
     var query = search.split(",");
@@ -661,12 +667,14 @@ $("#searchPlayersBtn").on("click", function(){
     }
 });
 
+//Search buttons for the players searches saved to history.
 $(".searchPlayersHistory").on("click", "button", function(){
     var search = $(this).text();
     var query = search.split(",");
     searchQuery(query, false, "players");
 });
 
+//Delete button for the retured answer for a query search.
 $("#deleteSearch").on("click", function(){
     clearSearch();
 });
